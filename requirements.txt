@@ -13,5 +13,4 @@ six==1.12.0
 SQLAlchemy==1.3.5
 Werkzeug==0.15.4
 uwsgi
-// python library used to interacte with Postgre (db)
 psycopg2 
