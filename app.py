@@ -1,3 +1,5 @@
+import os
+
 from datetime import timedelta
 
 from flask import Flask
@@ -10,11 +12,10 @@ from resources.item import Item, ItemsList
 from resources.store import Store, StoresList
 
 app = Flask(__name__)
-# Telling SQLAlchemy where to find data.db
-# Below says the SQLAlchemy database, will live at 
-# the root folder of the project
-# Note: Below code also by mySQL etc.
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+# get(<1environment_var_to_read>, <2default_value>)
+# 1 -> say from Heroku
+# 2 -> if running locally
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///data.db')
 
 # Specify a configuration property
 # Turns off Flask SQLAlchemy tracker, but not the
