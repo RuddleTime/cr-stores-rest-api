@@ -1,2 +1,2 @@
 # cr-stores-rest-api
-Work for Udemy course "REST APIs with Flask and Pytho"
+Work for Udemy course "REST APIs with Flask and Python"
